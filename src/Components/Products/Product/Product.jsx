@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons';
 
@@ -10,7 +10,6 @@ const classes = useStyles();
 //gutterBottom adds space to the bottom of the product section
 //onClick={() => onAddToCart(product.id, 1)} is a call back function so it doesn't call immediately, and returns the id of the product
 //so it knows what product is being updated, and adds to the cart 1 more of its quantity
-console.log(product);
 
     return (
         <Card className={classes.root}>
@@ -36,4 +35,4 @@ console.log(product);
     )
 }
 
-export default Product
+export default Product;
