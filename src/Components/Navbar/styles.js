@@ -1,4 +1,5 @@
 import { makeStyles, fade } from '@material-ui/core/styles';
+import { ScatterPlot } from '@material-ui/icons';
 
 const drawerWidth = 0;
 
@@ -11,6 +12,10 @@ export default makeStyles((theme) => ({
       marginLeft: drawerWidth,
     },
   },
+  largeIcon: {
+    width: 60,
+    height: 60,
+  },
   title: {
     flexGrow: 1,
     alignItems: 'center',
@@ -19,6 +24,7 @@ export default makeStyles((theme) => ({
   },
   image: {
     marginRight: '10px',
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
