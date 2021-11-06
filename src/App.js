@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { commerce } from './lib/commerce';
-import { Products, Navbar, Cart, Checkout } from './Components';
+import { Products, Navbar, Cart, Checkout, Splash } from './Components';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //To start node server, types "npm start" in terminal
@@ -55,6 +55,9 @@ const App = () => {
                 <Navbar totalItems={cart.total_items} />
                 <Switch>
                     <Route exact path="/">
+                        <Splash />
+                    </Route>
+                    <Route exact path="/shopping">
                         <Products products={products} onAddToCart={handleAddToCart} />
                     </Route>
 
