@@ -7,7 +7,9 @@ const Splash = () => {
     const classes= useStyles();
     return (
         <main className={classes.content}>
-            <h1>placeholder</h1>
+            <div className={classes.toolbar}>
+                <h1>placeholder</h1>
+            </div>
         </main>
     )
 }
