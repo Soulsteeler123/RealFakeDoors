@@ -3,10 +3,18 @@ import React, { useState, useEffect } from 'react'
 import { commerce } from './lib/commerce';
 import { Products, Navbar, Cart, Checkout, Splash } from './Components';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { createTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 
 //To start node server, types "npm start" in terminal
 //To kill node server, in terminal press Ctrl + c
 const App = () => {
+    const theme = createTheme({
+        palette: {
+          type: 'dark',
+        },
+      });
+
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState({});
 
@@ -50,6 +58,7 @@ const App = () => {
     }, []);
 
     return (
+        <ThemeProvider theme={theme}>
         <Router>
             <div>
                 <Navbar totalItems={cart.total_items} />
@@ -70,6 +79,7 @@ const App = () => {
                 </Switch>
              </div>
         </Router>
+        </ThemeProvider>
     )
 }
 
