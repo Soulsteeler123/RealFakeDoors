@@ -4,7 +4,8 @@ import { commerce } from './lib/commerce';
 import { Products, Navbar, Cart, Checkout, Splash } from './Components';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
+import { ThemeProvider }  from '@material-ui/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 //To start node server, types "npm start" in terminal
 //To kill node server, in terminal press Ctrl + c
@@ -20,7 +21,6 @@ const App = () => {
 
     const fetchProducts = async () => {
         const { data } = await commerce.products.list();
-        //console.log(data);
         setProducts(data);
     }
 
@@ -59,6 +59,7 @@ const App = () => {
 
     return (
         <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Router>
             <div>
                 <Navbar totalItems={cart.total_items} />
