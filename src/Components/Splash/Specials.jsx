@@ -12,10 +12,17 @@ const Item = (props) => {
 const Specials = () => {
     var items = [
         {
-            image: require("../../assets/slide1.png")
+            image: require("../../assets/coloured-doors.jpg")
         },
         {
-            image: require("../../assets/slide2.png")
+            image: require("../../assets/line-of-metal-doors.jpg")
+        }
+        ,
+        {
+            image: require("../../assets/fantasy-garden-15632061590mq.jpg")
+        },
+        {
+            image: require("../../assets/chinese-doors-296127685436478D3.jpg")
         }
     ]
     return(
