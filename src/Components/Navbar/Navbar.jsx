@@ -16,7 +16,7 @@ const Navbar = ({ totalItems }) => {
     const switchClick = (event) => {
         alert("No");
       };
-
+      
     return (
         <>
             <AppBar position = "fixed" className={mergeClasses.appBar} color="inherit">
