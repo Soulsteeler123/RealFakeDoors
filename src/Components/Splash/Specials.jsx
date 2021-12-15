@@ -26,7 +26,7 @@ const Specials = () => {
         }
     ]
     return(
-        <Carousel>
+        <Carousel animation='slide'>
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )
             }

@@ -1,10 +1,15 @@
 import React from 'react';
-import { IconButton, Icon, Grid } from '@material-ui/core';
+import { IconButton, Icon, Grid, Typography, Tooltip } from '@material-ui/core';
 //import Carousel from 'react-material-ui-carousel'
 import useStyles from'./styles';
 import Specials from './Specials';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
+import Box from '@material-ui/core/Box';
 import { Link, useLocation } from 'react-router-dom';
+import { flexbox } from '@material-ui/system';
+import { BorderHorizontal } from '@material-ui/icons';
+import { mergeClasses } from '@material-ui/styles';
+import LoyaltyIcon from '@material-ui/icons/Loyalty';
 const Splash = () => {
     const classes= useStyles();
     return (
@@ -12,37 +17,58 @@ const Splash = () => {
             <div className={classes.toolbar}>
                 <Specials/>
             </div>
-            <Grid container direction={'row'} spacing={8}  justifyContent="center">
-                <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit">
-                    <LocalMallIcon className={classes.topPicks}/>
-                </IconButton>
-                <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit">
-                    <LocalMallIcon className={classes.topPicks}/>
-                </IconButton>
-                <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit">
-                    <LocalMallIcon className={classes.topPicks}/>
-                </IconButton>
-                <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit">
-                    <LocalMallIcon className={classes.topPicks}/>
-                </IconButton>
-                <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit">
-                    <LocalMallIcon className={classes.topPicks}/>
-                </IconButton>
-                <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit">
-                    <LocalMallIcon className={classes.topPicks}/>
-                </IconButton>
-                <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit">
-                    <LocalMallIcon className={classes.topPicks}/>
-                </IconButton>
-                <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit">
-                    <LocalMallIcon className={classes.topPicks}/>
-                </IconButton>
-                <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit">
-                    <LocalMallIcon className={classes.topPicks}/>
-                </IconButton>
-            </Grid>
+            <Typography variant='h3' style={{textAlign: 'center', paddingTop: 18}}>Top Picks</Typography>
+            <div style={{paddingTop: 50}}></div>
+            <Box className={classes.flexContainer}>
+            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                <div>
+                    <Typography style={{fontSize:'24px'}}>Gifts For Him</Typography>
+                    <LoyaltyIcon className={classes.topPicks}/>
+                </div>
+            </IconButton>
+            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                <div>
+                    <Typography style={{fontSize:'24px'}}>Gifts For Her</Typography>
+                    <LoyaltyIcon className={classes.topPicks}/>
+                </div>
+            </IconButton>
+            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                <div>
+                    <Typography style={{fontSize:'24px'}}>Blue Light Special</Typography>
+                    <LoyaltyIcon className={classes.topPicks}/>
+                </div>
+            </IconButton>
+            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                <div>
+                    <Typography style={{fontSize:'24px'}}>Daily Deals</Typography>
+                    <LoyaltyIcon className={classes.topPicks}/>
+                </div>
+            </IconButton>
+            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                <div>
+                    <Typography style={{fontSize:'24px'}}>Real Fake Doors NFTs</Typography>
+                    <LoyaltyIcon className={classes.topPicks}/>
+                </div>
+            </IconButton>
+            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                <div>
+                    <Typography style={{fontSize:'24px'}}>Under $599,999.99</Typography>
+                    <LoyaltyIcon className={classes.topPicks}/>
+                </div>
+            </IconButton>
+            </Box>
+            <div style={{display:'flex', marginTop:50}}>
+            <div className={classes.grow}/>
+            <Tooltip title="Please don't">
+            <Typography>Contact us</Typography> 
+            </Tooltip>
+            <div className={classes.grow}/>
+            <Typography>About us</Typography> 
+            <div className={classes.grow}/>
+            </div>
         </main>
     )
 }
 
 export default Splash;
+

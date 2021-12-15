@@ -11,6 +11,32 @@ export default makeStyles((theme) => ({
     flexGrow: 1,
   },
   topPicks: {
-    fontSize: 150,
-  }
+    fontSize:150
+  }, 
+  grow: {
+    flexGrow: 1,
+  },
+  border: {
+    flex:2,
+    flexDirection:"row",
+    justifyContent:'space-between',
+    padding:10,
+    border: '2px solid black'
+  },
+  centeredcontent:{
+    alignContent:'space-between',
+    display:'flex',
+    justifyContent:'center',
+    margin: 'auto',
+  },
+  flexContainer:{
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  flexItem:{
+    flexGrow:1,
+    "&:hover": {
+      backgroundColor: "transparent",//hides an oversight. plz dont remove
+    }
+  },
 }));
