@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Toolbar, AppBar } from '@material-ui/core';
 import Product from'./Product/Product';
 import useStyles from'./styles';
-
+import { Sortbar } from '../../Components';
 
 const Products = ({ products, onAddToCart }) => {
     const classes= useStyles();
@@ -10,6 +10,9 @@ const Products = ({ products, onAddToCart }) => {
     return (
         <main className={classes.content}>
             <div className={classes.toolbar} />
+            <div style={{paddingBottom: 20}}>
+            <Sortbar />
+            </div>
              <Grid container justifyContent="center" spacing={4}>
             <div className={classes.root} />
                 {products.map((product) => (

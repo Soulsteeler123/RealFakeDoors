@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider }  from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-
+import Container from '@material-ui/core/Container';
 //To start node server, types "npm start" in terminal
 //To kill node server, in terminal press Ctrl + c
 const App = () => {
@@ -87,7 +87,6 @@ const App = () => {
                         <Splash />
                     </Route>
                     <Route exact path="/shopping">
-                        <Sortbar />
                         <Products products={products} onAddToCart={handleAddToCart} />
                     </Route>
 
