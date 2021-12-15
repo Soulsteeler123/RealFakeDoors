@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { commerce } from './lib/commerce';
-import { Products, Navbar, Cart, Checkout, Splash } from './Components';
+import { Products, Navbar, Cart, Checkout, Splash, Sortbar } from './Components';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider }  from '@material-ui/styles';
@@ -87,6 +87,7 @@ const App = () => {
                         <Splash />
                     </Route>
                     <Route exact path="/shopping">
+                        <Sortbar />
                         <Products products={products} onAddToCart={handleAddToCart} />
                     </Route>
 

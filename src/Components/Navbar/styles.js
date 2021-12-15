@@ -16,6 +16,10 @@ export default makeStyles((theme) => ({
     width: 60,
     height: 60,
   },
+  smallIcon: {
+    width: 30,
+    height: 30,
+  },
   title: {
     flexGrow: 1,
     alignItems: 'center',

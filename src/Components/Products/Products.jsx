@@ -1,8 +1,8 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
-
+import { Grid, Toolbar, AppBar } from '@material-ui/core';
 import Product from'./Product/Product';
 import useStyles from'./styles';
+
 
 const Products = ({ products, onAddToCart }) => {
     const classes= useStyles();
@@ -11,6 +11,7 @@ const Products = ({ products, onAddToCart }) => {
         <main className={classes.content}>
             <div className={classes.toolbar} />
              <Grid container justifyContent="center" spacing={4}>
+            <div className={classes.root} />
                 {products.map((product) => (
                     //xs={12} takes up full space on mobile devices
                     //sm={6} takes up 6 out of twelve for small devices

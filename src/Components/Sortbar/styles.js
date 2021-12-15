@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 const drawerWidth = 0;
+
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   appBar: {
@@ -10,12 +11,19 @@ export default makeStyles((theme) => ({
       marginLeft: drawerWidth,
     },
   },
-  content: {
+  largeIcon: {
+    width: 60,
+    height: 60,
+  },
+  smallIcon: {
+    width: 30,
+    height: 30,
+  },
+  grow: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
   },
   root: {
-    flexGrow: 1,
+      marginTop: 80,
+      flexGrow: 1
   }
 }));
