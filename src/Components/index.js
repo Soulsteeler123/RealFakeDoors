@@ -4,3 +4,4 @@ export { default as Cart } from './Cart/Cart';
 export { default as Checkout } from './CheckoutForm/Checkout/Checkout';
 export { default as Splash } from './Splash/Splash';
 export {default as Sortbar } from './Sortbar/Sortbar';
+export {default as Sidebar } from './Sidebar/Sidebar'; 
