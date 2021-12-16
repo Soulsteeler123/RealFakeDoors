@@ -35,8 +35,8 @@ export default makeStyles((theme) => ({
   },
   flexItem:{
     flexGrow:1,
-    "&:hover": {
-      backgroundColor: "transparent",//hides an oversight. plz dont remove
-    }
+    // "&:hover": {
+    //   backgroundColor: "transparent",//hides an oversight. plz dont remove
+    // }
   },
 }));

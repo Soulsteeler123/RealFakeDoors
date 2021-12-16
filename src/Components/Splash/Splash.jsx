@@ -19,44 +19,44 @@ const Splash = () => {
             </div>
             <Typography variant='h3' style={{textAlign: 'center', paddingTop: 18}}>Top Picks</Typography>
             <div style={{paddingTop: 50}}></div>
-            <Box className={classes.flexContainer}>
-            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
-                <div>
+            <Grid container className={classes.flexContainer}>
+                <Grid item>
                     <Typography style={{fontSize:'24px'}}>Gifts For Him</Typography>
-                    <LoyaltyIcon className={classes.topPicks}/>
-                </div>
-            </IconButton>
-            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
-                <div>
+                    <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                            <LoyaltyIcon className={classes.topPicks}/>
+                    </IconButton>
+                </Grid>
+                <Grid item>
                     <Typography style={{fontSize:'24px'}}>Gifts For Her</Typography>
-                    <LoyaltyIcon className={classes.topPicks}/>
-                </div>
-            </IconButton>
-            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
-                <div>
+                    <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                            <LoyaltyIcon className={classes.topPicks}/>
+                    </IconButton>
+                </Grid>
+                <Grid item>
                     <Typography style={{fontSize:'24px'}}>Blue Light Special</Typography>
-                    <LoyaltyIcon className={classes.topPicks}/>
-                </div>
-            </IconButton>
-            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
-                <div>
+                    <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                            <LoyaltyIcon className={classes.topPicks}/>
+                    </IconButton>
+                </Grid>
+                <Grid item>
                     <Typography style={{fontSize:'24px'}}>Daily Deals</Typography>
-                    <LoyaltyIcon className={classes.topPicks}/>
-                </div>
-            </IconButton>
-            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
-                <div>
-                    <Typography style={{fontSize:'24px'}}>Real Fake Doors NFTs</Typography>
-                    <LoyaltyIcon className={classes.topPicks}/>
-                </div>
-            </IconButton>
-            <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
-                <div>
-                    <Typography style={{fontSize:'24px'}}>Under $599,999.99</Typography>
-                    <LoyaltyIcon className={classes.topPicks}/>
-                </div>
-            </IconButton>
-            </Box>
+                    <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                            <LoyaltyIcon className={classes.topPicks}/>
+                    </IconButton>
+                </Grid>
+                <Grid item>
+                    <Typography style={{fontSize:'24px'}}>Real Fake Door NFTs</Typography>
+                    <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                            <LoyaltyIcon className={classes.topPicks}/>
+                    </IconButton>
+                </Grid>
+                <Grid item>
+                    <Typography style={{fontSize:'24px'}}>Merch</Typography>
+                    <IconButton component={Link} to="/shopping" aria-label="Go To Our Shop" color="inherit" className={classes.flexItem}>
+                            <LoyaltyIcon className={classes.topPicks}/>
+                    </IconButton>
+                </Grid>
+            </Grid>
             <div style={{display:'flex', marginTop:50}}>
             <div className={classes.grow}/>
             <Tooltip title="Please don't">
